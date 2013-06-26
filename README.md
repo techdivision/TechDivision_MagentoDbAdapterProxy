@@ -1,5 +1,5 @@
-Db Proxy Adapter
-================
+Magento Db Proxy Adapter
+========================
 
 What is it?
 -----------

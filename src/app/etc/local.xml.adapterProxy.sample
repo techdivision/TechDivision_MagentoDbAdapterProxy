@@ -1,0 +1,50 @@
+<config>
+    <global>
+        <resources>
+            <core_read>
+                <connection>
+                    <use></use>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[root]]></username>
+                    <password><![CDATA[password]]></password>
+                    <dbname><![CDATA[magento_enterprise_TechDivision_MagentoDbAdapterProxy]]></dbname>
+                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                    <model><![CDATA[mysql4]]></model>
+                    <type><![CDATA[proxy_mysql]]></type>
+                    <service_class><![CDATA[TechDivision_Db_Adapter_Service_Dummy]]></service_class>
+                    <pdoType><![CDATA[]]></pdoType>
+                    <active>1</active>
+                </connection>
+            </core_read>
+            <core_write>
+                <connection>
+                    <use></use>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[root]]></username>
+                    <password><![CDATA[password]]></password>
+                    <dbname><![CDATA[magento_enterprise_TechDivision_MagentoDbAdapterProxy]]></dbname>
+                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                    <model><![CDATA[mysql4]]></model>
+                    <type><![CDATA[proxy_mysql]]></type>
+                    <service_class><![CDATA[TechDivision_Db_Adapter_Service_Dummy]]></service_class>
+                    <pdoType><![CDATA[]]></pdoType>
+                    <active>1</active>
+                </connection>
+            </core_write>
+            <default_setup>
+                <connection>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[magento]]></username>
+                    <password><![CDATA[password]]></password>
+                    <dbname><![CDATA[magento_enterprise_TechDivision_MagentoDbAdapterProxy]]></dbname>
+                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                    <model><![CDATA[mysql4]]></model>
+                    <type><![CDATA[proxy_mysql]]></type>
+                    <service_class><![CDATA[TechDivision_Db_Adapter_Service_Dummy]]></service_class>
+                    <pdoType><![CDATA[]]></pdoType>
+                    <active>1</active>
+                </connection>
+            </default_setup>
+        </resources>
+    </global>
+</config>

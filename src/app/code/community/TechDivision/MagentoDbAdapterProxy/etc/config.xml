@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ */
+
+/**
+ * Extension configuration file.
+ *
+ * @category   TechDivision
+ * @package    TechDivision_MagentoDbAdapterProxy
+ * @subpackage Config
+ * @copyright  Copyright (c) 1996-2012 TechDivision GmbH (http://www.techdivision.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ * @version    ${release.version}
+ * @since      Class available since Release 0.1.0
+ * @author     TechDivision Core Team <core@techdivision.com>
+ */
+ -->
+<config>
+    <modules>
+        <TechDivision_MagentoDbAdapterProxy>
+            <version>${release.version}</version>
+        </TechDivision_MagentoDbAdapterProxy>
+    </modules>
+
+<!--
+    <frontend>
+        <translate>
+            <modules>
+                <techdivision_magentodbadapterproxy>
+                    <files>
+                        <default>TechDivision_MagentoDbAdapterProxy.csv</default>
+                    </files>
+                </techdivision_magentodbadapterproxy>
+            </modules>
+        </translate>
+        <routers>
+            <techdivision_magentodbadapterproxy>
+                <use>standard</use>
+                <args>
+                    <module>TechDivision_MagentoDbAdapterProxy</module>
+                    <frontName>techdivision_magentodbadapterproxy</frontName>
+                </args>
+            </techdivision_magentodbadapterproxy>
+        </routers>
+        <layout>
+            <updates>
+                <techdivision_magentodbadapterproxy>
+                    <file>techdivision/magentodbadapterproxy.xml</file>
+                </techdivision_magentodbadapterproxy>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <techdivision_magentodbadapterproxy>
+                <use>admin</use>
+                <args>
+                    <module>TechDivision_MagentoDbAdapterProxy</module>
+                    <frontName>admin_techdivision_magentodbadapterproxy</frontName>
+                </args>
+            </techdivision_magentodbadapterproxy>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <techdivision_magentodbadapterproxy>
+                    <files>
+                        <default>TechDivision_MagentoDbAdapterProxy.csv</default>
+                    </files>
+                </techdivision_magentodbadapterproxy>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <techdivision_magentodbadapterproxy translate="title" module="techdivision_magentodbadapterproxy">
+                                            <title>Stub</title>
+                                            <sort_order>50</sort_order>
+                                        </techdivision_magentodbadapterproxy>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <techdivision_magentodbadapterproxy>
+                    <file>techdivision/magentodbadapterproxy.xml</file>
+                </techdivision_magentodbadapterproxy>
+            </updates>
+        </layout>
+    </adminhtml>
+-->
+
+    <global>
+        <models>
+            <techdivision_magentodbadapterproxy>
+                <class>TechDivision_MagentoDbAdapterProxy_Model</class>
+                <resourceModel>techdivision_magentodbadapterproxy_resource</resourceModel>
+            </techdivision_magentodbadapterproxy>
+            <techdivision_magentodbadapterproxy_resource>
+                <class>TechDivision_MagentoDbAdapterProxy_Model_Resource</class>
+                <entities/>
+            </techdivision_magentodbadapterproxy_resource>
+        </models>
+        <resource>
+            <connection>
+                <types>
+                    <proxy_mysql>
+                        <adapter>TechDivision_Db_Adapter_Proxy</adapter>
+                        <class>TechDivision_MagentoDbAdapterProxy_Model_Resource_Type_Db_Proxy</class>
+                        <compatibleMode>1</compatibleMode>
+                    </proxy_mysql>
+                </types>
+            </connection>
+        </resource>
+<!--
+        <resources>
+            <techdivision_magentodbadapterproxy_setup>
+                <setup>
+                    <module>TechDivision_MagentoDbAdapterProxy</module>
+                    <class>TechDivision_MagentoDbAdapterProxy_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </techdivision_magentodbadapterproxy_setup>
+            <techdivision_magentodbadapterproxy_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </techdivision_magentodbadapterproxy_write>
+            <techdivision_magentodbadapterproxy_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </techdivision_magentodbadapterproxy_read>
+        </resources>
+        <blocks>
+            <techdivision_magentodbadapterproxy>
+                <class>TechDivision_MagentoDbAdapterProxy_Block</class>
+            </techdivision_magentodbadapterproxy>
+        </blocks>
+        <helpers>
+            <techdivision_magentodbadapterproxy>
+                <class>TechDivision_MagentoDbAdapterProxy_Helper</class>
+            </techdivision_magentodbadapterproxy>
+        </helpers>
+-->
+    </global>
+</config>

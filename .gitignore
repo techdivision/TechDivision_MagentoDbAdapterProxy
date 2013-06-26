@@ -1,0 +1,12 @@
+/.buildpath
+/.project
+/.settings
+/.idea
+/build
+/build.xml
+/build.default.properties
+/build.properties
+/instance-src
+/target
+/output
+.DS_Store
